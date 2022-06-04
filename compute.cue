@@ -13,6 +13,7 @@ _compute_instance: [string]: #ComputeInstance
 	subnetwork:      string | *REGION
 	ipv4_ptr?:       string
 	ipv6_ptr?:       string
+	tags: [...string]
 }
 
 resource: google_compute_instance: {for _id, _ci in _compute_instance {
@@ -25,6 +26,7 @@ resource: google_compute_instance: {for _id, _ci in _compute_instance {
 		machine_type: _ci.machine
 		name:         _ci.name
 		zone:         _ci.zone
+		tags:         _ci.tags
 		network_interface: [{
 			network:    _ci.network
 			subnetwork: _ci.subnetwork

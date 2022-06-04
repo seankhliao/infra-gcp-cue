@@ -11,4 +11,5 @@ _compute_instance: lilith: {
 	ipv4_ptr:        "lilith.liao.dev."
 	ipv6_ptr:        "lilith.liao.dev."
 	service_account: _service_account.lilith.email
+	tags: ["https", "wg"]
 }
