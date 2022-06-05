@@ -21,11 +21,11 @@ _service_account: cloud_build_trigger_scheduler: {
 	description: "Service account for running Cloud Build triggers in a Cloud Scheduler job"
 }
 
-_scheduled_jon: cloudbuild_nightly: {
+_cloudscheduler_http: cloudbuild_nightly: {
 	name:        "cloudbuild-nightly-schedule"
 	description: "Run cloudbuild-nightly every day"
 	schedule:    "0 4 * * *"
-	uri:         "https://cloudbuild.googleapis.com/v1/projects/\(PROJECT)/triggers/\(resource.google_cloud_build_trigger.cloudbuild_nightly.trigger_id):run"
+	uri:         "https://cloudbuild.googleapis.com/v1/projects/\(PROJECT)/triggers/${resource.google_cloud_build_trigger.cloudbuild_nightly.trigger_id}:run"
 	headers: {
 		"Content-Type": "application/octet-stream"
 		"User-Agent":   "Google-Cloud-Scheduler"
