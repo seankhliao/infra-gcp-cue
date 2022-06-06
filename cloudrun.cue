@@ -40,6 +40,10 @@ resource: google_cloud_run_service: {
 					containers: [{
 						image: _cr.image
 						env: [
+							{
+								name:  "LOG_FORMAT"
+								value: "json+gcp"
+							},
 							for _name, _secret in _cr.secret_env {
 								name: _name
 								value_from: [{

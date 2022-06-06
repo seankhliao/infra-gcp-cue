@@ -36,6 +36,7 @@ _clouddns_zone: liao_dev: {
 				"2600:1900:4000:b3b2:0:1::",
 			]
 		}
+		"newtab": A: ["199.36.158.100"]
 		"paste": CNAME: ["ghs.googlehosted.com."]
 		"seankhliao.com._report._dmarc": TXT: [
 			"\"v=DMARC1;\"",

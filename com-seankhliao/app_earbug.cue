@@ -24,7 +24,7 @@ _cloudrun_service: earbug: {
 	secret_env: EARBUG_SPOTIFY_SECRET: "earbug-client-secret"
 	service_account: _service_account.earbug.email
 	policy: "roles/run.invoker": ["allUsers"]
-	domains: ["earbug.liao.dev"]
+	domain: ["earbug.liao.dev"]
 }
 
 _cloudscheduler_http: earbug: {
