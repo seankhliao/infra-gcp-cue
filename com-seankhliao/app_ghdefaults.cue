@@ -14,6 +14,7 @@ _cloudrun_service: ghdefaults: {
 	env: GHDEFAULTS_APP_ID:                "126001"
 	secret_env: GHDEFAULTS_PRIVATE_KEY:    "ghdefaults-private-key"
 	secret_env: GHDEFAULTS_WEBHOOK_SECRET: "ghdefaults-webhook-secret"
+	secret_env: LOG_ERRORS_GCHAT:          "ghdefaults-errors-gchat"
 	proto:           "h2c"
 	timeout:         300
 	service_account: _service_account.ghdefaults.email

@@ -7,14 +7,14 @@ import (
 _cloudrun_service: [string]: #CloudRunService
 #CloudRunService: {
 	name:  string
-	image: string
+	image: string | *"\(_artifact_registry.run.url)/\(name):latest"
 	// ENV_NAME: secret-name
 	secret_env: [string]: string
 	// /mount/dir: secret-name
 	secret_mount: [string]: string
 	// ENV_NAME: ENV_VALUE
 	env: [string]: string
-	proto:           "h2c" | *"http1"
+	proto:           *"h2c" | "http1"
 	cpu:             string | *"1000m"
 	memory:          string | *"128Mi"
 	timeout:         int | *5

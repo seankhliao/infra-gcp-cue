@@ -11,7 +11,9 @@ _service_account: paste: {
 _cloudrun_service: paste: {
 	name:  "paste-liao-dev"
 	image: "\(_artifact_registry.run.url)/paste:latest"
-	env: PASTE_BUCKET: "paste-liao-dev"
+	env: PASTE_BUCKET:            "paste-liao-dev"
+	env: LOG_VERBOSITY:           "1"
+	secret_env: LOG_ERRORS_GCHAT: "paste-errors-gchat"
 	service_account: _service_account.paste.email
 	proto:           "h2c"
 	timeout:         300

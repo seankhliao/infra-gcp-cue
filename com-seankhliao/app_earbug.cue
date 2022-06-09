@@ -22,6 +22,7 @@ _cloudrun_service: earbug: {
 	env: EARBUG_BUCKET:                "earbug-liao-dev"
 	secret_env: EARBUG_SPOTIFY_ID:     "earbug-client-id"
 	secret_env: EARBUG_SPOTIFY_SECRET: "earbug-client-secret"
+	secret_env: LOG_ERRORS_GCHAT:      "earbug-errors-gchat"
 	service_account: _service_account.earbug.email
 	policy: "roles/run.invoker": ["allUsers"]
 	domain: ["earbug.liao.dev"]
