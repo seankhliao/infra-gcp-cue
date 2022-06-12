@@ -41,6 +41,7 @@ _cloudbuild_trigger_schedule: cloudbuild_nightly: repo: "cloudbuild-nightly"
 // other git repos that only need a cloudbuild job
 
 _cloudbuild_trigger_github: blogengine: repo:     "blogengine"
+_cloudbuild_trigger_github: chrome_newtab: repo:  "chrome-newtab"
 _cloudbuild_trigger_github: fin: repo:            "fin"
 _cloudbuild_trigger_github: gchat: repo:          "gchat"
 _cloudbuild_trigger_github: goreleases: repo:     "goreleases"
