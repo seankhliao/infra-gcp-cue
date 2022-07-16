@@ -8,7 +8,7 @@ _clouddns_zone: [string]: #CloudDnsZone
 #CloudDnsZone: {
 	name:        string
 	dns:         string
-	description: string | *""
+	description: string
 	visibility:  "private" | *"public"
 	// subdomain: type: value
 	records: [string]: [string]: [...string]
